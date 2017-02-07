@@ -16,7 +16,7 @@ button.onclick = function(){
     request.send(null);
 };
 
-var nameInput = document.getElementById('name').value;
+
 document.getElementById('submit_btn').onclick = function(){
     
     var request = new XMLHttpRequest();
@@ -34,6 +34,7 @@ document.getElementById('submit_btn').onclick = function(){
             }
         }
     };
+    var nameInput = document.getElementById('name').value;
     request.open('GET', 'http://abhinay-sunny.imad.hasura-app.io/submit-name?name='+nameInput, true);
     request.send(null);
     
